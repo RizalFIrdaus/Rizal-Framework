@@ -1,4 +1,7 @@
 <?php
-$info = "PATH NOT FOUND";
-isset($_SERVER["PATH_INFO"]) ? $info = $_SERVER["PATH_INFO"] : $info;
-echo $info;
+$path = "/index";
+
+if (isset($_SERVER["PATH_INFO"])) {
+    $path = $_SERVER["PATH_INFO"];
+}
+require __DIR__ . "/../app/View" . $path . ".php";
