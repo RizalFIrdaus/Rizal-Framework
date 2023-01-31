@@ -6,7 +6,7 @@ use PDOException;
 
 class Database extends PDO {
    
-    public static function getConnection():PDO{
+    public static function getConnection(){
 
         try {
             $host = "localhost";
