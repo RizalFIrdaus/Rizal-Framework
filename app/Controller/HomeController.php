@@ -10,7 +10,7 @@ class HomeController {
     public function phpinfo(){
         phpinfo();
     }
-    public function test(){
-        echo "test";
+    public function test(string $id){
+        echo $id;
     }
 }

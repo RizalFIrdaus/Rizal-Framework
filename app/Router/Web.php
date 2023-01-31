@@ -11,7 +11,7 @@ class Web {
     public function run(){
         Route::add("GET", "/", HomeController::class, "index");
         Route::add("GET", "/phpinfo", HomeController::class, "phpinfo");
-        Route::add("GET", "/test", HomeController::class, "test"); 
+        Route::add("GET", "/test/([0-9a-zA-Z]*)", HomeController::class, "test"); 
     }
 }
 
