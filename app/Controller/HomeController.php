@@ -13,7 +13,7 @@ class HomeController {
 
     }
     public function phpinfo(){
-        Controller::view("phpinfo",[]);
+        Controller::view("phpinfo");
     }
     public function test(string $id){
         echo $id;

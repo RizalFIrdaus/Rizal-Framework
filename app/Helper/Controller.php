@@ -6,7 +6,7 @@ use Rizal\Mvc\Model\User;
 
 class Controller {
 
-    public static function view(string $path, ?array $models){
+    public static function view(string $path, array $models =[]){
         if(!is_null($models)){
             $models;
         }
