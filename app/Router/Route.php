@@ -30,7 +30,9 @@ class Route
 
         foreach(self::$routes as $route){
             if($path == $route["path"] && $method == $route["method"]){
-                echo "Controller : " . $route["controller"] . ", Function : " . $route["function"];
+                $function = $route["function"];
+                $controller = new $route["controller"];
+                $controller->$function();
                 return; 
             }
         }
