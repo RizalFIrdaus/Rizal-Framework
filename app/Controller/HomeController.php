@@ -3,12 +3,13 @@
 namespace Rizal\Mvc\Controller;
 
 require_once __DIR__ . "/../../vendor/autoload.php";
+
 use Rizal\Mvc\Model\User;
 use Rizal\Mvc\Helper\Controller;
 class HomeController {
 
     public function index(){
-        $models = User::run();
+        $models = User::All();
         Controller::view("index",$models);
 
     }
