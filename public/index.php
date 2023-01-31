@@ -1,7 +1,10 @@
 <?php
-$path = "/index";
+require_once __DIR__ . "/../vendor/autoload.php";
 
-if (isset($_SERVER["PATH_INFO"])) {
-    $path = $_SERVER["PATH_INFO"];
-}
-require __DIR__ . "/../app/View" . $path . ".php";
+use Rizal\Mvc\Router\Route;
+
+Route::add("GET", "/", "HomeController", "index");
+Route::add("GET", "/phpinfo", "HomeController", "index");
+Route::add("GET", "/test", "HomeController", "index"); 
+
+Route::run();
