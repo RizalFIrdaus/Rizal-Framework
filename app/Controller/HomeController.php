@@ -2,13 +2,18 @@
 
 namespace Rizal\Mvc\Controller;
 
+require_once __DIR__ . "/../../vendor/autoload.php";
+use Rizal\Mvc\Model\User;
+use Rizal\Mvc\Helper\Controller;
 class HomeController {
 
     public function index(){
-        echo "Index HomeContorller";
+        $models = User::run();
+        Controller::view("index",$models);
+
     }
     public function phpinfo(){
-        phpinfo();
+        Controller::view("phpinfo",[]);
     }
     public function test(string $id){
         echo $id;
