@@ -26,7 +26,7 @@ Modified Config file database in /Helper/Database.
  $password = "your password";
 ```
 
-## Make Controller
+## Controller
 Inside App\Controller\(NameController.php)
 User is model from App\Mode\User.php, you can modified or add some models.
 Controller::view is static function to passing your view and models
@@ -45,7 +45,7 @@ IF there is no data model in your controller you can passing array null
     }
 ```
 
-#Model
+## Model
 This code are eloquent data, in $sql variable you can modified SQL Syntax like INSERT,UPDATE, OR DELETE
 Then you can passing your data with row in database like "name" => $row["name"]
 ```shell
@@ -65,7 +65,7 @@ Then you can passing your data with row in database like "name" => $row["name"]
     }
 ```
 
-$View 
+## View 
 This way to fetch your data from controller
 ```shell
 <!DOCTYPE html>
