@@ -1,6 +1,6 @@
 <?php
 
-namespace Rizal\Mvc\Router;
+namespace Rizal\Mvc\Helper;
 
 class Route
 {

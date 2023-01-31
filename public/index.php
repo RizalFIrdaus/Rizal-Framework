@@ -1,11 +1,8 @@
 <?php
 require_once __DIR__ . "/../vendor/autoload.php";
+use Rizal\Mvc\Helper\Route;
+use Rizal\Mvc\Router\Web;
 
-use Rizal\Mvc\Router\Route;
-use Rizal\Mvc\Controller\HomeController;
-
-Route::add("GET", "/", HomeController::class, "index");
-Route::add("GET", "/phpinfo", HomeController::class, "phpinfo");
-Route::add("GET", "/test", HomeController::class, "test"); 
-
+$web = new Web();
+$web->run();
 Route::run();
